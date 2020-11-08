@@ -1,0 +1,285 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+/*
+    BARVY
+    šedá: #e5e5e5 (pozadí body)
+    světle fialová: #48418e (navigace, primární tlačítko, nadpisy služeb, patička)
+    tmavě fialová: #25133d (výchozí barva gradientu, hover primárního tlačítka)
+    nachová: #aa5477 (koncová barva gradientu)
+    gradient v záhlaví: linear-gradient(to right, #25133d 25%, #aa5477 100%)
+
+    PÍSMO
+    Source Sans Pro
+    https://fonts.google.com/specimen/Source+Sans+Pro?query=source+Sans
+    - light 300 (slogan)
+    - bold 700 (logo, nadpisy)
+    - regular 400 (vše ostatní)
+
+    HOVER EFEKT
+    navigace: prohodit barvu písma s barvou pozadí
+    primární tlačítko: ohraničení světle fialovou, pozadí tmavě fialovou
+    sekundární tlačítko: ohraničení i pozadí světle fialovou
+
+    BONUSOVÁ VÝZVA
+    Změň barvu ikon na tmavě fialovou.
+*/
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.container {
+  /* obsah stránky je omezený do pruhu širokého 1200px */
+  max-width: 1200px;
+  /* stránka je vycentrovaná */
+  margin: 0;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- zde začni psát vlastní CSS ----- */
+
+
+.navigace li {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0rem;
+}
+
+.navigace a {
+  display: block;
+  padding: 1rem;
+  color: #25133d;
+  text-decoration: none;
+}
+
+.navigace a:hover {
+  background-color: #48418e;
+  color: white;
+}
+
+.super {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.super,
+.design,
+.funkce,
+.stazeni {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #25133d 25%, #aa5477 100%);
+  color: white;
+  width: 100%;
+}
+
+.superapka {
+  padding-left: 1rem;
+
+
+}
+
+.slogan {
+  font-size: 2em;
+  padding-left: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  color: #25133d;
+}
+
+.tlacitka {
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.tlacitko1,
+.tlacitko2 {
+  color: white;
+  padding: 1em;
+  margin-top: 2em;
+  margin-left: -1em;
+  margin-right: 1em;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  border: 0.1rem solid #ffffff;
+  border-radius: 10px;
+
+}
+
+.tlacitko1 {
+  background-color: #48418e;
+}
+
+.tlacitka ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+
+.tlacitka a {
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.sluzby {
+  display: flex;
+  flex-direction: column;
+}
+
+.cestuj {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cestovani {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.chatuj {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.chatovani {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.zazij {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.zazivani {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.paticka {
+  background-color: #48418e;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+
+}
+
+@media (min-width: 480px) {
+}
+
+/*.tlacitka {
+  display: inline-block;
+  width: auto;
+}
+
+.tlacitko1,
+.tlacitko2 {
+  display: flex;
+  flex-direction: row;
+}
+}*/
+
+.tlacitka {
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+
+.tlacitka .tlacitko1  {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  flex: 1;
+}
+
+.tlacitka .tlacitko2 {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;  
+  flex: 1;
+
+}  
+
+.tlacitka .tlacitka ul {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.tlacitka .tlacitka li {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+}
+
+.sluzby {
+  display: flex;
+}
+
+.cestovani {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+@media (min-width: 860px) {
+
+.container {
+background-image: url("images/telefon.png");
+background-image: linear-gradient(to right, #25133d 25%, #aa5477 100%),
+url("images/telefon.png");
+background-repeat: no-repeat;
+background-position: right;
+
+}
+
+.container::after {
+  content: url("images/telefon.png") ;
+  position: relative;
+  right: -49.7rem;
+  bottom: 30rem;
+}
+}
