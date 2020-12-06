@@ -38,7 +38,6 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  max-width: 1200px;
 }
 
 .container {
@@ -234,22 +233,42 @@ h2 {
 
 .sluzby {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   align-content: space-between;
 }
 
-.cestovani {
+.cestovani,
+.chatovani,
+.zazivani {
   display: flex;
   flex-direction: column;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.chatovani {
-  padding-left: 1rem;
-  padding-right: 1rem;
+
+.cestovani::before {
+  content: url("images/letadlo.png");
+  position: relative;
+  display: flex;
+  flex: start;
 }
+
+.chatovani::before {
+  content: url("images/bubliny.png");
+  position: relative;
+  bottom: 17.38rem;
+  display: flex;
+  flex: start;
+}
+
+.zazivani::before {
+  content: url("images/mapa.png");
+  position: relative;
+  display: flex;
+  flex: start;
+}
+
 
 @media (min-width: 860px) {
   .container {
@@ -259,17 +278,16 @@ h2 {
     background-repeat: no-repeat;
     background-position: right;
     height: 26rem;
+    
   }
 
-  .container::after {
+ .tlacitka::after {
     content: url("images/telefon.png");
     position: relative;
-    right: -49.7rem;
-    bottom: 25rem;
+    bottom: 17.38rem;
+    display: flex;
+    flex: end;
   }
 
-  .cestovani {
-    display: flex;
-    flex-direction: column;
-  }
+
 }
